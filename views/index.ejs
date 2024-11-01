@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 class="title">Blog Site</h1>
+    <a href="/add"><button class="button add">add blog</button></a>
+        <div class="container">     
+            <% if(locals.no){ %>
+                    <% for(var i = 0; i < no; i++) { %>
+                    <div class="blog-container">
+                        <div class="bloginner">  
+                            <h1 class="heading"><%= arr[i].heading %></h1>
+                            <p class="content"><%= arr[i].content %></p>
+                        </div>
+                        <div class="button-container">
+                            <button class="delete button" data-id="<%= arr[i].no %>">Delete</button>
+                            <a href="/edit/<%= arr[i].no %>"><button class="button">Edit</button></a>
+                        </div>
+                    </div>
+                    <% } %>
+                <% } else { %>
+                    <h1>No blogs, add to create one</h1>
+                <% } %>
+        </div> 
+</body>
+<script src="/indes.js"></script>
+</html>

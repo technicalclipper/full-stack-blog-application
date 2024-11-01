@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+    <style>
+        body{
+    background-color: black;
+    color:white;
+    height:100vh;
+    }
+    .container{
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:30px;
+    }
+    #heading{
+        width:70%;
+        height:50px;
+        font-size: 50px;
+        
+    }
+
+    #content{
+        width:70%;
+        height:100px;
+        font-size: 40px;
+    }
+    .button{
+    margin: none;
+    width:80px;
+    height:40px;
+    }
+    </style>
+</head>
+<body>
+    <h1>edit page</h1>
+    <div class="container"> 
+        <h1 class="heading">Add heading</h1>
+        <input type="text" id="heading" name="heading" value="<%=heading%>">
+        <h1 class="content">Add content</h1>
+        <input type="text" id="content" name="content" value="<%=content%>">
+        <button class="change button" data-id="<%= no%>">make changes</button>
+    </div> 
+</body>
+<script src="/edit.js"></script>
+</html>
